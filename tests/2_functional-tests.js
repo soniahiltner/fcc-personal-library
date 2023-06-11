@@ -199,4 +199,8 @@ suite("Functional Tests", function () {
       });
     });
   });
+  //evitar que la app se cuelgue en replit
+  after(function () {
+    chai.request(server).get("/");
+  });
 });
